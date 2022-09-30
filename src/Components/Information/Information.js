@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Information = (props) => {
     const notify = () => toast("Congratulations!!! You have Completed the task!!");
     const [breakTime, setBreakTime] = useState('')
-    const onClick = event => {
+    const onClickbtn = event => {
         const newTime = event.target.innerText
         setBreakTime(newTime)
         localStorage.setItem('break-time', newTime)
@@ -72,16 +72,16 @@ const Information = (props) => {
         h2 > Add A Break < /h2> <
         div className = 'btn-area' >
         <
-        button onClick = { onClick }
+        button onClick = { (e)=> onClickbtn(e) }
         className = 'btn-minute-10' > < p > 10 min < /p> </button >
         <
-        button onClick = { onClick }
+        button onClick = { (e)=> onClickbtn(e) }
         className = 'btn-minute-20' > < p > 20 min < /p></button >
         <
-        button onClick = { onClick }
+        button onClick = { (e)=> onClickbtn(e) }
         className = 'btn-minute-30' > < p > 30 min < /p></button >
         <
-        button onClick = { onClick }
+        button onClick = { (e)=> onClickbtn(e)}
         className = 'btn-minute-40' > < p > 40 min < /p></button >
         <
         /div>
@@ -100,7 +100,7 @@ const Information = (props) => {
         /div> <
         div className = 'exercise-area2' >
         <
-        p > Break Time: < small > Minutes < /small></p >
+        p > Break Time: {breakTime}< small > Minutes < /small></p >
         <
         /div>
 
