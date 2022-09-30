@@ -106,8 +106,6 @@ const Information = (props) => {
 
         <
         /div>
-
-
         <
         div className = 'btn-completed' >
         <
