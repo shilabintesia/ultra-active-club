@@ -18,8 +18,6 @@ const Information = (props) => {
     }, [])
 
 
-
-
     const { newCarts } = props
     let totalTime = 0
     for (const newCart of newCarts) {
@@ -27,7 +25,6 @@ const Information = (props) => {
         totalTime = totalTime + newCart.time
 
     }
-
 
     return ( <
         div className = 'info' >
@@ -124,4 +121,3 @@ const Information = (props) => {
 };
 
 export default Information;
-
